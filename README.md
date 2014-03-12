@@ -9,14 +9,19 @@ Installation (Mac & Linux)
 ==========================
 
 1.- Clone the Repository
+
 `git clone git@github.com:omero/Vim-for-Drupal.git ~/.vim` 
 
 2.- Init the git submodules and update them (for all the plugins)
+
 `cd ~/.vim`
+
 `git submodule init`
+
 `git submodule update`
 
 3.- Make a symbolik link to .vimrc
+
 `ln -s ~/.vim/vimrcs/vimrc ~/.vimrc`
 
 4.- Enjoy
