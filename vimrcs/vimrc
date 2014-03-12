@@ -9,7 +9,7 @@ set shell=/bin/bash
 let mapleader = ","
 
 "Always open nerdtree (oprtional)
-autocmd vimenter * NERDTree
+"autocmd vimenter * NERDTree
 
 "Setting Molokai Color
 colorscheme molokai
@@ -42,4 +42,12 @@ if has("autocmd")
   autocmd BufRead,BufNewFile *.view set filetype=php
   augroup END
 endif
+
 syntax on
+
+"vim airline configurations
+set laststatus=2
+"in case to have powerline fonts
+let g:airline_powerline_fonts = 1
+"Set color terminal 256
+set t_Co=256
