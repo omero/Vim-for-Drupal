@@ -1,0 +1,45 @@
+"Instrucions Pathogen
+execute pathogen#infect()
+filetype plugin indent on
+
+"if you use fish shell 
+set shell=/bin/bash
+
+"mapping t key to <Leader>
+let mapleader = ","
+
+"Always open nerdtree (oprtional)
+autocmd vimenter * NERDTree
+
+"Setting Molokai Color
+colorscheme molokai
+let g:molokai_original = 1
+let g:rehash256 = 1
+set background=dark
+
+"Map Ctrl+n to open Nerd Tree
+map <C-n> :NERDTreeToggle<CR>
+"Map NerdtreeTabs
+map <Leader>n <plug>NERDTreeTabsToggle<CR>
+
+set number
+"Applying best practices for drupal vim more information on https://drupal.org/node/29325
+"Identation
+set expandtab
+set tabstop=2
+set shiftwidth=2
+set autoindent
+set smartindent
+"Syntax highlighting
+if has("autocmd")
+  " Drupal *.module and *.install files.
+  augroup module
+  autocmd BufRead,BufNewFile *.module set filetype=php
+  autocmd BufRead,BufNewFile *.install set filetype=php
+  autocmd BufRead,BufNewFile *.test set filetype=php
+  autocmd BufRead,BufNewFile *.inc set filetype=php
+  autocmd BufRead,BufNewFile *.profile set filetype=php
+  autocmd BufRead,BufNewFile *.view set filetype=php
+  augroup END
+endif
+syntax on
