@@ -17,10 +17,13 @@ let g:molokai_original = 1
 let g:rehash256 = 1
 set background=dark
 
-"Map Ctrl+n to open Nerd Tree
-map <C-n> :NERDTreeToggle<CR>
+"Map Ctrl+t to open Nerd Tree
+map <C-t> :NERDTreeToggle<CR>
 "Map NerdtreeTabs
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
+"Webdevicons
+set encoding=utf8
+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h11
 
 set number
 "Applying best practices for drupal vim more information on https://drupal.org/node/29325

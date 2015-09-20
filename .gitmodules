@@ -28,3 +28,12 @@
 [submodule "bundle/vim-multiple-cursors"]
 	path = bundle/vim-multiple-cursors
 	url = https://github.com/terryma/vim-multiple-cursors.git
+[submodule "bundle/Dockerfile.vim"]
+	path = bundle/Dockerfile.vim
+	url = https://github.com/ekalinin/Dockerfile.vim.git
+[submodule "bundle/scss-syntax.vim"]
+	path = bundle/scss-syntax.vim
+	url = https://github.com/cakebaker/scss-syntax.vim.git
+[submodule "bundle/vim-webdevicons"]
+	path = bundle/vim-webdevicons
+	url = https://github.com/ryanoasis/vim-webdevicons
