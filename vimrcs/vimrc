@@ -5,6 +5,10 @@ filetype plugin indent on
 "if you use fish shell 
 set shell=/bin/bash
 
+" General set
+set number
+syntax on
+
 "mapping t key to <Leader>
 let mapleader = ","
 
@@ -19,16 +23,11 @@ set background=dark
 
 "Map Ctrl+t to open Nerd Tree
 map <C-t> :NERDTreeToggle<CR>
-"Map NerdtreeTabs
-map <Leader>n <plug>NERDTreeTabsToggle<CR>
+
 "Webdevicons
 set encoding=utf8
 set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h11
 
-"YouCompleteMe
-let g:ycm_seed_identifiers_with_syntax = 1
-
-set number
 "Applying best practices for drupal vim more information on https://drupal.org/node/29325
 "Identation
 set expandtab
@@ -36,6 +35,7 @@ set tabstop=2
 set shiftwidth=2
 set autoindent
 set smartindent
+
 "Syntax highlighting
 if has("autocmd")
   " Drupal *.module and *.install files.
@@ -50,11 +50,21 @@ if has("autocmd")
   augroup END
 endif
 
-syntax on
-
 "vim airline configurations
 set laststatus=2
+
 "in case to have powerline fonts
 let g:airline_powerline_fonts = 1
+
 "Set color terminal 256
 set t_Co=256
+
+" YouCompleteMe
+let g:ycm_seed_identifiers_with_syntax = 1
+let g:ycm_key_list_select_completion=[]
+let g:ycm_key_list_previous_completion=[]
+
+" Ultisnips
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
