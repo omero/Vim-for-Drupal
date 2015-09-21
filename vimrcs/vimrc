@@ -25,6 +25,9 @@ map <Leader>n <plug>NERDTreeTabsToggle<CR>
 set encoding=utf8
 set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h11
 
+"YouCompleteMe
+let g:ycm_seed_identifiers_with_syntax = 1
+
 set number
 "Applying best practices for drupal vim more information on https://drupal.org/node/29325
 "Identation
@@ -43,6 +46,7 @@ if has("autocmd")
   autocmd BufRead,BufNewFile *.inc set filetype=php
   autocmd BufRead,BufNewFile *.profile set filetype=php
   autocmd BufRead,BufNewFile *.view set filetype=php
+  autocmd BufRead,BufNewFile *.scss set filetype=css
   augroup END
 endif
 
