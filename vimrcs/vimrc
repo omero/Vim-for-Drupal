@@ -12,10 +12,25 @@ syntax on
 "mapping t key to <Leader>
 let mapleader = ","
 
-noremap <F3> :Autoformat<CR>
+"map Autoformat
+noremap <F1> :Autoformat<CR>
+set pastetoggle=<F2>
+
+"map ident unident
 vmap <S-i> >gv
 vmap <S-u> <gv
+
+"set mouse
 set mouse=a
+
+" mapping paste mode
+
+" mapping tab navigation
+map <D-S-]> gt
+map <D-S-[> gt
+map <D-1> 1gt
+map <D-2> 2gt
+map <D-0> :tablast<CR>
 
 "Always open nerdtree (oprtional)
 "autocmd vimenter * NERDTree
@@ -52,6 +67,7 @@ if has("autocmd")
     autocmd BufRead,BufNewFile *.profile set filetype=php
     autocmd BufRead,BufNewFile *.view set filetype=php
     autocmd BufRead,BufNewFile *.scss set filetype=css
+    autocmd BufRead,BufNewFile *.php set filetype=php.html
   augroup END
 endif
 
@@ -72,6 +88,3 @@ let g:ycm_key_list_previous_completion=[]
 " Ultisnips
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
-" Autoformatter
-noremap <F3> :Autoformat<CR>
